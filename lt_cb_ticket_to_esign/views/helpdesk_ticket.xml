@@ -17,7 +17,7 @@
         <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
-                    <button name="action_view_document" type="object"
+                    <button name="action_view_document" type="object" attrs="{'invisible': [('sign_count','=',0)]}"
                             class="oe_stat_button" icon="fa-pencil-square-o">
                         <field name="sign_count" widget="statinfo" string="eSign"/>
                     </button>
