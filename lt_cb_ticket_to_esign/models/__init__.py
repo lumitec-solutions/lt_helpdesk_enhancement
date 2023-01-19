@@ -7,3 +7,4 @@
 from . import helpdesk_ticket
 from . import send_sign_request
 from . import sign_request
+from . import sign_template

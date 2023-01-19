@@ -31,9 +31,14 @@ class HelpdeskTicket(models.Model):
 
     def send_esign_document(self):
         return {
-            'view_mode': 'kanban',
+            'view_mode': 'kanban,tree,form',
             'res_model': "sign.template",
+            'domain': [('helpdesk_ticket_template', '=', True)],
             'type': 'ir.actions.act_window',
+            'context': {'helpdesk_ticket': True,
+                        'partner': self.partner_id.id,
+                        'ticket_id': self.id
+                        }
         }
 
     def update_esign_count(self):

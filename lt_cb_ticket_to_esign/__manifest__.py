@@ -22,6 +22,7 @@
         'views/helpdesk_ticket.xml',
         'views/send_sign_request.xml',
         'views/sign_request.xml',
+        'views/sign_template.xml',
          ],
 
     'installable': True,

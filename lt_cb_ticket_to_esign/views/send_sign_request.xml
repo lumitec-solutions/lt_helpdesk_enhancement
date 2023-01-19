@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="sign.sign_send_request_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='filename']" position="after">
-                <field name="ticket_id"/>
+                <field name="ticket_id" invisible="1"/>
             </xpath>
         </field>
     </record>
