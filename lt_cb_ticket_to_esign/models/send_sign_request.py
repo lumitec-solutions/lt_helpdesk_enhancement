@@ -61,7 +61,7 @@ class SignSendRequest(models.TransientModel):
         if self._context.get('helpdesk_ticket') == True:
             signer_ids = [(0, 0, {
                 'role_id': role.id,
-                'partner_id': self._context.get('partner'),
+                'partner_id': self._context.get('assigned_to') if role.name == 'Company' else self._context.get('partner'),
             }) for role in roles]
         else:
             signer_ids = [(0, 0, {

@@ -37,7 +37,8 @@ class HelpdeskTicket(models.Model):
             'type': 'ir.actions.act_window',
             'context': {'helpdesk_ticket': True,
                         'partner': self.partner_id.id,
-                        'ticket_id': self.id
+                        'ticket_id': self.id,
+                        'assigned_to': self.user_id.partner_id.id
                         }
         }
 
